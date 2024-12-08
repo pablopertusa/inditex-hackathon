@@ -1,0 +1,7 @@
+pandas
+numpy
+ipykernel
+requests
+polars
+pyarrow
+pytest
