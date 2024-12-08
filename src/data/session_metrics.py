@@ -23,4 +23,28 @@ def get_session_metrics(df: pd.DataFrame, user_id: int) -> pd.DataFrame:
     -------
     Pandas Dataframe with some metrics for all the sessions of the given user.
     """
-    ...
+
+    df["timestamp_local"] = pd.to_datetime(df["timestamp_local"])
+
+
+    # Filtrar el DataFrame por el usuario dado
+    user_data = df[df["user_id"] == user_id]
+
+
+    # Agrupar por sesión y calcular las métricas
+    session_metrics = (
+        user_data.groupby("session_id")
+        .agg(
+            total_session_time=("timestamp_local", lambda x: round(x.max().timestamp() - x.min().timestamp(),2)),
+            cart_addition_ratio=("add_to_cart", lambda x: x.sum()*100 / len(x))
+        )
+        .reset_index()
+    )
+    
+    # Añadir la columna user_id
+    session_metrics["user_id"] = user_id
+
+    # Reordenar columnas
+    session_metrics = session_metrics[["user_id", "session_id", "total_session_time", "cart_addition_ratio"]]
+
+    return session_metrics
