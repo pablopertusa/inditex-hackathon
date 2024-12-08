@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 def get_session_metrics(df: pd.DataFrame, user_id: int) -> pd.DataFrame:
