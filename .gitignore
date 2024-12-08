@@ -48,6 +48,11 @@ Thumbs.db
 *.jpeg
 *.png
 
-data/raw/
-data/processed/
+
 venv/
+requirements.txt
+data/raw/products.pkl
+data/raw/test.csv
+data/raw/train.csv
+data/raw/users_data.csv
+data/raw/users_data.json
