@@ -36,7 +36,7 @@ def get_session_metrics(df: pd.DataFrame, user_id: int) -> pd.DataFrame:
         user_data.groupby("session_id")
         .agg(
             total_session_time=("timestamp_local", lambda x: round(x.max().timestamp() - x.min().timestamp(),2)),
-            cart_addition_ratio=("add_to_cart", lambda x: x.sum()*100 / len(x))
+            cart_addition_ratio=("add_to_cart", lambda x: round(x.sum()*100 / len(x), 2))
         )
         .reset_index()
     )
