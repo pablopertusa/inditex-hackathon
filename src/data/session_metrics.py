@@ -48,10 +48,10 @@ def get_session_metrics(df: pd.DataFrame, user_id: int) -> pd.DataFrame:
     # Reordenar columnas
     session_metrics = session_metrics[["user_id", "session_id", "total_session_time", "cart_addition_ratio"]]
 
-    session_metrics["user_id"] = session_metrics["user_id"].map(lambda x : int(x))
-    session_metrics["session_id"] = session_metrics["session_id"].map(lambda x : int(x))
-    session_metrics["total_session_time"] = session_metrics["total_session_time"].map(lambda x : round(x,2))
-    session_metrics["cart_addition_ratio"] = session_metrics["cart_addition_ratio"].map(lambda x : round(x,2))
+    # session_metrics["user_id"] = session_metrics["user_id"].map(lambda x : int(x))
+    # session_metrics["session_id"] = session_metrics["session_id"].map(lambda x : int(x))
+    # session_metrics["total_session_time"] = session_metrics["total_session_time"].map(lambda x : round(x,2))
+    # session_metrics["cart_addition_ratio"] = session_metrics["cart_addition_ratio"].map(lambda x : round(x,2))
 
 
     return session_metrics
