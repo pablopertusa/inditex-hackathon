@@ -23,3 +23,13 @@ Predicciones:
     - Si no lo está tendremos que hacer la predicción en función de las últimas interacciones (session_id)
     - Si no está logeado ni tiene interacciones hay que hacer una predicción a ciegas
     ?- Cómo se pueden hacer predicciones en función de la sesión y del user_id
+
+Solucion para las predicciones diferentes: tres modelos diferentes para cada situacion
+
+
+En este dataset:
+    - Cada cliente puede tener varios session_id
+    - En train y test muchas observaciones estan sin user_id
+
+Las predicciones:
+    - Tiene que ser para cada session_id que hay en test, NO PARA CADA USER_ID

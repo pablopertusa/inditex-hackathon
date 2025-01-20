@@ -57,3 +57,7 @@ data/raw/train.csv
 data/raw/users_data.csv
 data/raw/users_data.json
 recommenders
+data/processed/train_users.csv
+src/models/preprocessing.ipynb
+data/processed/most_populars.json
+predictions/predictions_3_schema.json
