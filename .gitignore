@@ -61,3 +61,13 @@ data/processed/train_users.csv
 src/models/preprocessing.ipynb
 data/processed/most_populars.json
 predictions/predictions_3_schema.json
+data/processed/product_embedding.json
+data/processed/train_embeddings.npy
+data/processed/train_index.csv
+data/processed/training_products.npy
+data/processed/training_sequences.npy
+src/models/__pycache__
+src/models/utils/__pycache__
+data/processed/test_index.csv
+data/processed/test_embeddings.npy
+src/models/tests.ipynb
